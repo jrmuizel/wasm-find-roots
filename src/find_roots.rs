@@ -604,10 +604,9 @@ fn select_targets(g: &HashMap<String, HashSet<String>>, ga: &GraphAttribs, targe
 
 pub fn find_cc_roots(buf: &[u8], target: String) -> String {
     println!("Parsing cycle collector graph...");
-    println!("Fod");
     let mut args = Args::default();
     args.file_name = "cc-edges.11270.1736388050.log".to_string();
-    args.target = "JSWindowActorProtocol".to_string();
+    args.target = target;
     let output = Vec::new();
     let output_file = Box::new(std::io::Cursor::new(output));
     args.output_file = output_file;
